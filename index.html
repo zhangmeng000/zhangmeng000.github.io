@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/newadd.js"></script>
+	<link rel="stylesheet" href="css/newadd.css">
+</head>
+<body>
+	<input id="opener" type="button" value="新增地址">
+	<div id="newaddr">
+		
+		
+	</div>
+	<div id="dialog">
+		<div class="inner">
+			<div class="boxxin">
+				<span>新增地址</span>
+				<a href="#"></a>
+			</div>
+			<div class="boxname box" >
+				<p><span>*</span>收货人<span id="shouhuo"></span></p>
+				<input type="text" id="shouhuoname">
+			</div>
+			<div class="boxphone box">
+				<p><span>*</span>联系电话<span id="dianhua"></span></p>
+				<input type="text" id="phone">
+			</div>
+			<div class="boxadd box">
+				<p><span>*</span>所在地区<span id="add">请填写完整的所在地区!</span></p>
+				<select name="" class="address">
+				<option value=""></option>
+				<option value=""></option></select>
+				<select name="" class="address"><option value="">请选择</option>
+				<option value=""></option>
+				<option value=""></option></select>
+				<select name="" class="address"><option value="">请选择</option>
+				<option value=""></option>
+				<option value=""></option></select>
+			</div>
+			<div class="box1">
+				<h3><span>*</span>详细地址</h3>
+				<p>请填写详细地址!</p>
+				<input id="deat" type="text" placeholder="请填写详细地址">
+			</div>
+			<div class="box2">
+				<h3>地址别名</h3>
+				<input id="add" type="text">
+			</div>
+			<div class="box3">
+				<h3>常用别名</h3>
+				<span class="home">家</span>
+				<span class="company">公司</span>
+				<span class ="pthome">父母家</span>
+			</div>
+			<div class="box4">
+				<input type="checkbox" name="" checked><label for="">设为默认地址</label>
+			</div>
+			<div class="box5">
+				<input type="submit" value="保存地址">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
