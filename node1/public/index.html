@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>hello</h1>
+	<h2>world</h2>
+	<input type="button" value="获取数据" id="btn">
+	<input type="button" value="传输数据" id="btn1">
+	<p id="name"></p>
+	<p id="age"></p>
+	<script src="script/jquery-1.11.1.js"></script>
+	<script>
+		$("#btn").click(function(){
+			$.ajax({
+				url:"/getdata",
+				type:"get", //post
+				success:function(data){
+					$("#name").text(data.name)
+					$("#age").text(data.age)
+				}
+			})
+		})
+		$("#btn1").click(function(){
+			$.ajax({
+				url:"/postdata",
+				type:"post",
+				data:{name:"张"},
+				success:function(data){
+					if(data==true){
+						console.log("正确")
+					}
+					
+				}
+			})
+		})
+		// $("#btn").click(function(){
+		// 	$.get("/getdata",function(data){
+		// 		console.log(data)
+		// 	})
+		// })
+		// $("#btn1").click(function(){
+		// 	$.post("/postdata",{name:"张"},function(data){
+		// 			console.log(data)
+		// 	})
+		// })
+
+
+	</script>
+</body>
+</html>
